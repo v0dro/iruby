@@ -70,7 +70,7 @@ Try `ipython help` for more information.
         IRuby.logger.warn "Could not load bundler: #{e.message}\n#{e.backtrace.join("\n")}" unless LoadError === e
       end
 
-      require 'iruby'
+      require_relative '../iruby'
       Kernel.new(config_file).run
     rescue Exception => e
       IRuby.logger.fatal "Kernel died: #{e.message}\n#{e.backtrace.join("\n")}"
